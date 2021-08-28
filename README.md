@@ -5,7 +5,7 @@ based on https://www.youtube.com/watch?v=r-Jte8Y8zag
 
 `sudo docker run -i loadimpact/k6 run - <dbtest.js`
 
-` ✗ reached request rate
+ ✗ reached request rate
       ↳  82% — ✓ 30172 / ✗ 6260
 
      checks.........................: 82.81% ✓ 30172     ✗ 6260 
@@ -25,4 +25,4 @@ based on https://www.youtube.com/watch?v=r-Jte8Y8zag
      iterations.....................: 36432  19.299132/s
      vus............................: 1      min=1       max=400
      vus_max........................: 400    min=400     max=400
-`
+
