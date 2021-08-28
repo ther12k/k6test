@@ -2,14 +2,12 @@ import http from 'k6/http';
 import { sleep,check } from 'k6';
 export let options = {
   stages: [
-    { duration: '2m', target: 100 }, //below normal
-    { duration: '5m', target: 100 },
-    { duration: '2m', target: 200 }, //normal load
-    { duration: '5m', target: 200 },
-    { duration: '2m', target: 300 }, //around breaking point
-    { duration: '5m', target: 300 },
-    { duration: '2m', target: 400 }, //beyond breaking point
-    { duration: '5m', target: 400 },
+    { duration: '10s', target: 100 }, //below normal
+    { duration: '1m', target: 100 },
+    { duration: '10s', target: 1400 }, //spike
+    { duration: '3m', target: 1400 },
+    { duration: '10s', target: 100 }, //scale down
+    { duration: '3m', target: 100 },
     { duration: '3m', target: 0 }, //scale down, recovery stage
   ],
   thresholds: {
